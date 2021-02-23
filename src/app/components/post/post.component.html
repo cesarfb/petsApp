@@ -1,0 +1,28 @@
+<mat-card class="grid-container">
+    <div class="info-contact">
+        <img class="avatar" [src]="dataPost.owner.picture" alt="picture">
+        <div class="contact pointer" (click)="verAutor(dataPost.owner)">
+            <span class="f-500">{{ dataPost.owner?.firstName + " " + dataPost.owner?.lastName}}</span>
+            <span class="muted">{{dataPost.owner?.email}}</span>
+        </div>
+    </div>
+    <div class="post-info">
+        <img class="pet-img" [src]="dataPost.image" alt="picture">
+        <mat-chip-list>
+            <mat-chip (click)="filterValue(tag)" *ngFor="let tag of dataPost.tags" color="accent" selected style="cursor: pointer;">
+                {{tag}}
+            </mat-chip>
+        </mat-chip-list>
+        <div>
+            <span> {{dataPost.text | titlecase}} </span>
+            <a [href]="dataPost.link" *ngIf="dataPost.link" target="blank">{{dataPost.link}}</a>
+        </div>
+        <div class="pet-info">
+            <img src="assets/img/heard.webp" alt="">
+            <span>{{dataPost.likes}} likes</span>
+            <span class="cs-spacer"></span>
+            <span class="muted">{{dataPost.publishDate | date: 'MMM dd YYYY HH:mm:ss'}}</span>
+        </div>
+        <span class="pointer" (click)="verComentarios(dataPost.id)">Ver Comentarios</span>
+    </div>
+</mat-card>

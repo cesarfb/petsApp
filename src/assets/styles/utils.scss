@@ -1,0 +1,36 @@
+.ellipse {
+    span {
+        overflow     : hidden;
+        white-space  : nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.muted {
+    color: #6c757d;
+}
+
+.cs-spacer {
+    flex: 1 auto;
+}
+
+.f-500 {
+    font-weight: 600;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.avatar {
+    width        : 40px;
+    border-radius: 50%;
+}
+
+.info-contact {
+    display      : flex;
+    gap          : 10px;
+    .contact {
+        display: grid;
+    }
+}  

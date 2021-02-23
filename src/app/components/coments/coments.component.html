@@ -1,0 +1,27 @@
+<app-spinner *ngIf="isLoading;"></app-spinner>
+<div *ngIf="!isLoading">
+    <ng-container *ngIf="comentsArr.length > 0; else noComent">
+        <section class="flex-coment">
+            <div *ngFor="let item of comentsArr" class="card-coment">
+                <div class="info-contact">
+                    <img class="avatar" [src]="item.owner.picture" alt="profile">
+                    <div class="contact">
+                        <span class="f-500">{{item.owner.firstName + " " + item.owner.lastName}}</span>
+                        <span class="muted">{{item.publishDate | date: 'MMM dd YYYY HH:mm:ss'}}</span>
+                    </div>
+                </div>
+                <br>
+                <span>{{item.message}}</span>
+            </div>
+        </section>
+    </ng-container>
+    <ng-template #noComent>
+        <div class="no_coment">
+            <img src="assets/img/no_comments.png" alt="">
+            <br>
+            <span>
+                <b> {{'No se encontraron comentarios para este post' | uppercase}} </b>
+            </span>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,22 @@
+.flex-coment {
+    gap            : 20px;
+    display        : flex;
+    overflow       : auto;
+    flex-wrap      : wrap;
+    max-width      : 500px;
+    max-height     : 620px;
+    justify-content: space-between;
+    .card-coment {
+        height    : fit-content;
+        margin    : 8px;
+        padding   : 6px;
+        box-shadow: 1px 0px 4px 1px #6c746f;
+    }
+}
+
+.no_coment {
+    img {
+        width: 250px;
+    }
+    text-align: center;
+}

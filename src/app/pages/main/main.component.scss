@@ -1,0 +1,17 @@
+.grid-posts {
+    gap                  : 3rem;
+    width                : 90%;
+    margin               : 1rem auto 1rem auto;
+    padding              : 20px;
+    display              : grid;
+    grid-template-columns: repeat(auto-fit,355px);
+}
+
+.go_back {
+    padding    : 10px;
+    display    : flex;
+    align-items: center;
+    mat-icon {
+        margin: 10px;
+    }
+}

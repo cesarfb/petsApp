@@ -1,0 +1,15 @@
+.container {
+    gap    : 20px;
+    display: flex;
+    img {
+        min-width: 300px;
+    }
+    .info-profile {
+        display              : grid;
+        grid-template-columns: repeat(2,1fr);
+        .profile-contact {
+            display  : flex;
+            flex-flow: column;
+        }
+    }
+}

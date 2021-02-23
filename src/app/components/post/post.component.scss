@@ -1,0 +1,21 @@
+.grid-container {
+    gap          : 15px;
+    width        : 350px;
+    display      : grid;
+}
+
+.post-info {
+    gap    : 20px;
+    display: grid;
+    .pet-img {
+        width: 100%;
+    }
+    .pet-info {
+        display    : flex;
+        align-items: center;
+        img {
+            margin: 5px;
+            width : 35px;
+        }
+    }
+}

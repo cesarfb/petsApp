@@ -1,0 +1,7 @@
+<div class="go_back pointer" (click)="goBack()" *ngIf="tag">
+    <mat-icon>arrow_back</mat-icon>
+    Regresar
+</div>
+<div class="grid-posts">
+    <app-post [dataPost]="item" *ngFor="let item of postArr"></app-post>
+</div>

@@ -1,0 +1,26 @@
+<app-spinner *ngIf="!dataUser"></app-spinner>
+<section class="container" *ngIf="dataUser">
+    <img [src]="dataUser.picture" alt="picture">
+    <div class="info-profile">
+        <div class="profile-contact">
+            <span class="muted">{{dataUser.id}}</span>
+            <span class="f-500">{{(dataUser.title) + " " + dataUser.firstName + " " + dataUser.lastName}}</span>
+            <br>
+            <span><span class="f-500">Genero: </span> {{dataUser.gender | titlecase}}</span>
+            <span><span class="f-500">Fecha de Nacimiento: </span> {{dataUser.dateOfBirth | date: 'MMM dd YYYY'}}</span>
+            <span><span class="f-500">Fecha de Registro: </span> {{dataUser.registerDate | date: 'MMM dd YYYY'}}</span>
+            <br>
+            <span><span class="f-500">Email: </span> {{dataUser.email}}</span>
+            <span><span class="f-500">Celular: </span> {{dataUser.phone}}</span>
+        </div>
+        <div>
+            <span class="f-500">Dirección</span>
+            <br>
+            <span>
+                {{dataUser.location.country + ', '+ dataUser.location.state + ', '+ dataUser.location.city}}
+            </span>
+            <br>
+            <span>{{dataUser.location.street}}</span>
+        </div>
+    </div>
+</section>
